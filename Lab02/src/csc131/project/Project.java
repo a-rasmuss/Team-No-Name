@@ -21,6 +21,7 @@ public class Project {
 			while(scanner.hasNextLine()) {
 				lineText = scanner.nextLine();
 				System.out.println(lineText);
+				scanner.close();
 			}
 			scanner.close();
 		} catch (FileNotFoundException error) {
