@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 
 public class Project {
-	
 
 	private static final String FILE_NAME = "readme"; //file name
 
@@ -23,6 +22,7 @@ public class Project {
 				lineText = scanner.nextLine();
 				System.out.println(lineText);
 			}
+			scanner.close();
 		} catch (FileNotFoundException error) {
 			System.err.println("Error! Unable to open file. Error: "+ error);
 		}
