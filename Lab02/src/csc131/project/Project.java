@@ -16,10 +16,6 @@ public class Project {
 	private static String lineText; //stores the values of the text file 'readme'
 	private static Scanner scanner;
 	
-	public static void main(String[] args) {
-		Project project = new Project();
-		project.writeToFile("wridddddddting to the file test");
-	}
 	
 	public Project() {
 		//default constructor
