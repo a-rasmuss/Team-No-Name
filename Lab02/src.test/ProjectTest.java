@@ -15,6 +15,8 @@ public class ProjectTest {
 	private Project project;
 	private String delimeter;
 	private String expectedResult;
+	
+	
 	@Before
 	public void setUp() {
 		project = new Project();
@@ -31,4 +33,5 @@ public class ProjectTest {
 		assertNotNull(project.getFileContent(delimeter));
 		assertEquals("returns the contents of the file", expectedResult, project.getFileContent(delimeter));
 	}
+	
 }
