@@ -56,7 +56,6 @@ public class Project {
 			System.out.println("Error, file not found: " + e.getMessage());
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		writer.close();
