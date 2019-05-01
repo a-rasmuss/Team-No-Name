@@ -1,4 +1,7 @@
 import static org.junit.Assert.assertEquals;
+import java.io.File;
+import java.util.Scanner;
+
 import static org.junit.Assert.assertNotNull;
 
 import java.io.FileNotFoundException;
@@ -39,5 +42,27 @@ public class ProjectTest {
 	public void writeValuesToFile() {
 		write = "test: writing to the file";
 		assertEquals("successfully wrote to file ",true,project.writeToFile(write));
+	}
+	
+	@Test
+	public void printTest() 
+	{
+		write = "This is the test case for a program that in no way resembles a phone gps tag!";
+		project.writeToFile(write);
+		
+		Scanner input;
+		try {
+			input = new Scanner(new File("writeToMe"));
+			while (input.hasNextLine())
+			{
+				System.out.println(input.nextLine());
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		assertEquals("successfully wrote to file", true, project.writeToFile(write));
+		
+		
 	}
 }
