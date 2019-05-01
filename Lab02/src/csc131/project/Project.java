@@ -13,21 +13,22 @@ public class Project {
 	private static Scanner scanner;
 	
 	
-	public static void main(String[] args) throws FileNotFoundException {
-		
+	public Project() {
+		//default constructor
+	}
+	public String getFileContent(String inDelimeter) throws FileNotFoundException {
+		StringBuilder fileContent = new StringBuilder();
 		try {
 			scanner = new Scanner(new File(FILE_NAME));
-			
 			while(scanner.hasNextLine()) {
 				lineText = scanner.nextLine();
-				System.out.println(lineText);
-				scanner.close();
+				fileContent.append(lineText).append(inDelimeter);
 			}
 			scanner.close();
 		} catch (FileNotFoundException error) {
 			System.err.println("Error! Unable to open file. Error: "+ error);
 		}
-		
+		return fileContent.toString();
 	}
 	
 }
