@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Project {
 
-	private static final String FILE_NAME = "readme"; //file to read from
+	private static final String READ_FILE = "readme"; //file to read from
 	private static final String WRITE_FILE = "writeToMe"; //file to write to
 	
 	private PrintWriter writer;
@@ -34,7 +34,7 @@ public class Project {
 	public String getFileContent(String inDelimeter) throws FileNotFoundException {
 		StringBuilder fileContent = new StringBuilder();
 		try {
-			scanner = new Scanner(new File(FILE_NAME));
+			scanner = new Scanner(new File(READ_FILE));
 			while(scanner.hasNextLine()) {
 				lineText = scanner.nextLine();
 				fileContent.append(lineText).append(inDelimeter);
