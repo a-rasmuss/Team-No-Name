@@ -15,6 +15,7 @@ public class ProjectTest {
 	private Project project;
 	private String delimeter;
 	private String expectedResult;
+	private String write;
 	
 	
 	@Before
@@ -22,6 +23,7 @@ public class ProjectTest {
 		project = new Project();
 		delimeter = DEFAULT_DELIMETER;
 		expectedResult = "";
+		write = "";
 	}
 	
 	
@@ -31,7 +33,11 @@ public class ProjectTest {
 					delimeter + "test" + delimeter + "file" + delimeter + "called: readme" +
 					delimeter + "for CSC131 class project" + delimeter;
 		assertNotNull(project.getFileContent(delimeter));
-		assertEquals("returns the contents of the file", expectedResult, project.getFileContent(delimeter));
+		assertEquals("returns the contents of the file ", expectedResult, project.getFileContent(delimeter));
 	}
-	
+	@Test
+	public void writeValuesToFile() {
+		write = "test: writing to the file";
+		assertEquals("successfully wrote to file ",true,project.writeToFile(write));
+	}
 }
