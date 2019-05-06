@@ -1,14 +1,15 @@
+package csc131.project;
 import static org.junit.Assert.assertEquals;
-import java.io.File;
-import java.util.Scanner;
-
 import static org.junit.Assert.assertNotNull;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import csc131.project.Finder;
 import csc131.project.Project;
 
 public class ProjectTest {
@@ -64,19 +65,5 @@ public class ProjectTest {
 		assertEquals("successfully wrote to file", true, project.writeToFile(write));
 		
 		
-	}
-	
-	@test
-	public void testfindGPSLocation()
-	{
-		System.out.println("if a random number outputs following this message, then success!!");
-		System.out.println(findGPSLocation());
-	}
-	
-	@test
-	public void testsetGPS()
-	{
-		int gps = 12;
-		System.out.println(CellPhoneOwner(setGPS.gps));//should output the GPS that was set in this test case
 	}
 }
