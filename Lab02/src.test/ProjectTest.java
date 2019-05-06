@@ -65,4 +65,18 @@ public class ProjectTest {
 		
 		
 	}
+	
+	@test
+	public void testfindGPSLocation()
+	{
+		System.out.println("if a random number outputs following this message, then success!!");
+		System.out.println(findGPSLocation());
+	}
+	
+	@test
+	public void testsetGPS()
+	{
+		int gps = 12;
+		System.out.println(CellPhoneOwner(setGPS.gps));//should output the GPS that was set in this test case
+	}
 }
