@@ -4,12 +4,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.util.Random;
 import java.util.Scanner;
-
+import java.util.*;
 
 public class Project {
 
-	private static final String READ_FILE = "readme"; //file to read from
+	private static final String READ_FILE = "writeToMe"; //file to read from
 	private static final String WRITE_FILE = "writeToMe"; //file to write to
 	
 	private PrintWriter writer;
@@ -61,4 +62,5 @@ public class Project {
 		writer.close();
 		return writer.checkError() == false ? true : false;
 	}
+
 }

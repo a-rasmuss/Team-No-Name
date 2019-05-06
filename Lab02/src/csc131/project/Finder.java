@@ -5,13 +5,21 @@ import java.util.Random;
 
 public class Finder //class for the cellphone finder.
 {
-	int lostTag;// takes in the tag and gps of the lost phone as instance variables.
-	int lostGps;
+	private int lostTag;// takes in the tag and gps of the lost phone as instance variables.
+	private int lostGps;
 	
 	public Finder()
 	{
 		lostTag = -1;
 		lostGps = -1;
+	}
+	public int getLostTag()
+	{
+		return lostTag;
+	}
+	public int getLostGps()
+	{
+		return lostGps;
 	}
 	public void getItemTag(int tag)// gets the lost item tag.
 	{
