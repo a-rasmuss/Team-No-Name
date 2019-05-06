@@ -66,4 +66,12 @@ public class ProjectTest {
 		
 		
 	}
+	@Test
+	public void getTag()
+	{
+		CellPhoneOwner cell = new CellPhoneOwner();
+		int tag = cell.getTag();
+		System.out.println("Tag number: " + tag);
+		
+	}
 }
